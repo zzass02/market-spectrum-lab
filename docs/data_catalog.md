@@ -5,9 +5,9 @@ Market Spectrum Lab에서 사용하는 금융 및 거시경제 데이터의
 
 ## Market Data
 
-| Dataset | Symbol | Provider | Frequency | Fields |
+| Dataset | Symbol / Series | Provider | Frequency | Fields |
 |---|---|---|---|---|
-| S&P 500 | TBD | TBD | Daily | OHLCV or Value |
+| S&P 500 | SP500 | FRED | Daily | Close |
 | Tesla | TSLA | Toss Securities | Daily | OHLCV |
 | Apple | AAPL | Toss Securities | Daily | OHLCV |
 | NVIDIA | NVDA | Toss Securities | Daily | OHLCV |
@@ -20,10 +20,10 @@ Market Spectrum Lab에서 사용하는 금융 및 거시경제 데이터의
 
 | Dataset | Series | Provider | Frequency |
 |---|---|---|---|
-| VIX | TBD | TBD | Daily |
-| Federal Funds Rate | TBD | TBD | Daily |
-| U.S. Treasury 2Y | TBD | TBD | Daily |
-| U.S. Treasury 10Y | TBD | TBD | Daily |
-| CPI | TBD | TBD | Monthly |
-| Unemployment Rate | TBD | TBD | Monthly |
-| Crude Oil Price | TBD | TBD | Daily |
+| VIX | VIXCLS | FRED | Daily |
+| Federal Funds Rate | DFF | FRED | Daily |
+| U.S. Treasury 2Y | DGS2 | FRED | Daily |
+| U.S. Treasury 10Y | DGS10 | FRED | Daily |
+| CPI | CPIAUCSL | FRED | Monthly |
+| Unemployment Rate | UNRATE | FRED | Monthly |
+| WTI Crude Oil | DCOILWTICO | FRED | Daily |
