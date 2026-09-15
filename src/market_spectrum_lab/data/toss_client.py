@@ -41,21 +41,28 @@ class TossClient:
         self,
         symbol: str,
         count: int = 200,
-    ) -> list[dict]:
+        before: str | None = None,
+    ) -> dict:
         if self.access_token is None:
             self.authenticate()
+
+        params = {
+            "symbol": symbol,
+            "interval": "1d",
+            "count": count,
+            "adjusted": True,
+        }
+
+        if before is not None:
+            params["before"] = before
 
         response = requests.get(
             f"{self.BASE_URL}/api/v1/candles",
             headers={
-                "Authorization": f"Bearer {self.access_token}",
+                "Authorization":
+                    f"Bearer {self.access_token}",
             },
-            params={
-                "symbol": symbol,
-                "interval": "1d",
-                "count": count,
-                "adjusted": True,
-            },
+            params=params,
             timeout=10,
         )
 
@@ -63,4 +70,4 @@ class TossClient:
 
         data = response.json()
 
-        return data["result"]["candles"]
+        return data["result"]
