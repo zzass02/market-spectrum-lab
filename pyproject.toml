@@ -9,7 +9,11 @@ description = "Market time-series analysis across time, frequency, and time-freq
 readme = "README.md"
 requires-python = ">=3.11"
 
-dependencies = []
+dependencies = [
+    "requests>=2.32,<3",
+    "python-dotenv>=1.0,<2",
+    "pandas>=2.2,<3",
+]
 
 [project.optional-dependencies]
 dev = [
